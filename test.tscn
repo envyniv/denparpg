@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://00000054out.dae" type="PackedScene" id=1]
+[ext_resource path="res://00000007out.dae" type="PackedScene" id=2]
+
+[node name="Node" type="Node"]
+
+[node name="00000007out" parent="." instance=ExtResource( 2 )]
+
+[node name="00000054out" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 75.1815, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34.0525, 53.0584 )
