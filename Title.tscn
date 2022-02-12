@@ -1,70 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://button-font.tres" type="DynamicFont" id=1]
-[ext_resource path="res://button.tres" type="StyleBox" id=2]
-[ext_resource path="res://font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://Title3DBG.tscn" type="PackedScene" id=4]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.780392, 0.435294, 0.776471, 1 )
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color( 0.898039, 0.807843, 0.890196, 1 )
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-shadow_color = Color( 0.360784, 0.360784, 0.360784, 0.6 )
-shadow_size = 1
-shadow_offset = Vector2( 0, 5 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 1, 0.807843, 0.0627451, 1 )
-draw_center = false
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-
-[sub_resource type="StyleBoxFlat" id=2]
-content_margin_left = 12.0
-content_margin_right = 12.0
-content_margin_top = 12.0
-content_margin_bottom = 12.0
-bg_color = Color( 0.0627451, 0.101961, 0.239216, 0.756863 )
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color( 0.52549, 0.741176, 0.776471, 1 )
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-
-[sub_resource type="Theme" id=4]
-default_font = ExtResource( 3 )
-Button/colors/font_color = Color( 1, 1, 1, 1 )
-Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
-Button/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )
-Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
-Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
-Button/fonts/font = ExtResource( 1 )
-Button/styles/focus = null
-Button/styles/hover = SubResource( 1 )
-Button/styles/normal = ExtResource( 2 )
-Button/styles/pressed = null
-ItemList/styles/bg = null
-ItemList/styles/bg_focus = null
-ItemList/styles/cursor = SubResource( 5 )
-Panel/styles/panel = SubResource( 2 )
+[ext_resource path="res://logo.png" type="Texture" id=5]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 4 )
+theme = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -85,8 +28,12 @@ render_target_update_mode = 3
 
 [node name="Logo" type="TextureRect" parent="."]
 anchor_right = 1.0
-margin_top = 60.0
-margin_bottom = 260.0
+margin_left = 245.0
+margin_right = -246.0
+margin_bottom = 329.0
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -95,37 +42,31 @@ __meta__ = {
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -189.0
-margin_top = 244.0
-margin_right = 190.0
-margin_bottom = 305.0
+margin_left = -130.5
+margin_top = 312.0
+margin_right = 126.5
+margin_bottom = 271.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Continue" type="Button" parent="Logo/VBoxContainer"]
-margin_top = 60.0
-margin_right = 379.0
-margin_bottom = 92.0
-text = "LOAD GAME"
-
-[node name="New" type="Button" parent="Logo/VBoxContainer"]
-margin_top = 96.0
-margin_right = 379.0
-margin_bottom = 128.0
+[node name="Game" type="Button" parent="Logo/VBoxContainer"]
+margin_top = 74.0
+margin_right = 257.0
+margin_bottom = 118.0
 text = "NEW GAME"
 
 [node name="Options" type="Button" parent="Logo/VBoxContainer"]
-margin_top = 132.0
-margin_right = 379.0
-margin_bottom = 164.0
+margin_top = 122.0
+margin_right = 257.0
+margin_bottom = 166.0
 text = "SETTINGS"
 
 [node name="Exit" type="Button" parent="Logo/VBoxContainer"]
-margin_top = 168.0
-margin_right = 379.0
-margin_bottom = 200.0
+margin_top = 170.0
+margin_right = 257.0
+margin_bottom = 214.0
 text = "END GAME"
 
 [node name="Panel" type="Panel" parent="."]
@@ -133,32 +74,58 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -267.0
-margin_top = -123.0
-margin_right = 267.0
-margin_bottom = 123.0
+margin_left = -243.0
+margin_top = -144.5
+margin_right = 243.0
+margin_bottom = 144.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Recap" type="Label" parent="Panel"]
-margin_left = 119.0
-margin_top = 48.0
-margin_right = 393.0
-margin_bottom = 135.0
-text = "Hero LV:9
-Playtime: 3:15:21"
-
 [node name="Button" type="Button" parent="Panel"]
-margin_left = 80.0
-margin_top = 191.0
-margin_right = 136.0
-margin_bottom = 223.0
+margin_left = 76.0
+margin_top = 223.5
+margin_right = 139.0
+margin_bottom = 267.5
 text = "Start"
 
 [node name="Button2" type="Button" parent="Panel"]
-margin_left = 344.0
-margin_top = 189.0
-margin_right = 424.0
-margin_bottom = 221.0
+margin_left = 340.0
+margin_top = 221.5
+margin_right = 425.0
+margin_bottom = 265.5
 text = "Return"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -159.0
+margin_top = -107.5
+margin_right = 160.0
+margin_bottom = 60.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HERO" type="Label" parent="Panel/VBoxContainer"]
+margin_right = 319.0
+margin_bottom = 37.0
+text = "Hero level: 99"
+align = 1
+
+[node name="PLAY" type="Label" parent="Panel/VBoxContainer"]
+margin_top = 41.0
+margin_right = 319.0
+margin_bottom = 78.0
+text = "Play time: 999:99"
+align = 1
+
+[node name="sure" type="Label" parent="Panel/VBoxContainer"]
+margin_top = 131.0
+margin_right = 319.0
+margin_bottom = 168.0
+size_flags_vertical = 10
+text = "Use this data?"
+align = 1
