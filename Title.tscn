@@ -1,8 +1,114 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://theme.tres" type="Theme" id=1]
-[ext_resource path="res://Title3DBG.tscn" type="PackedScene" id=4]
+[ext_resource path="res://materials/theme.tres" type="Theme" id=1]
+[ext_resource path="res://radio_left.png" type="Texture" id=2]
+[ext_resource path="res://radio_right.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Title3DBG.tscn" type="PackedScene" id=4]
 [ext_resource path="res://logo.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Logo/Radio-Right:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 122, 14 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Logo/Radio-Left:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, 61 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Logo/Radio-Left:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Logo/Radio-Right:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "emit"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Logo/Radio-Right:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 122, 14 ), Vector2( 154, 1 ), Vector2( 196, -16 ), Vector2( 238, -41 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Logo/Radio-Left:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 10, 61 ), Vector2( -26, 86 ), Vector2( -51, 99 ), Vector2( -108, 141 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Logo/Radio-Left:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Logo/Radio-Right:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -38,6 +144,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Radio-Right" type="TextureRect" parent="Logo"]
+margin_left = 122.0
+margin_top = 14.0
+margin_right = 274.0
+margin_bottom = 140.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Radio-Left" type="TextureRect" parent="Logo"]
+margin_left = 10.0
+margin_top = 61.0
+margin_right = 162.0
+margin_bottom = 187.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Logo"]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -45,31 +173,53 @@ anchor_bottom = 1.0
 margin_left = -130.5
 margin_top = 312.0
 margin_right = 126.5
-margin_bottom = 271.0
+margin_bottom = 142.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Game" type="Button" parent="Logo/VBoxContainer"]
-margin_top = 74.0
+[node name="Load" type="Button" parent="Logo/VBoxContainer"]
+visible = false
 margin_right = 257.0
-margin_bottom = 118.0
+margin_bottom = 51.0
+text = "LOAD GAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game" type="Button" parent="Logo/VBoxContainer"]
+margin_right = 257.0
+margin_bottom = 51.0
 text = "NEW GAME"
 
 [node name="Options" type="Button" parent="Logo/VBoxContainer"]
-margin_top = 122.0
+margin_top = 55.0
 margin_right = 257.0
-margin_bottom = 166.0
+margin_bottom = 106.0
 text = "SETTINGS"
 
 [node name="Exit" type="Button" parent="Logo/VBoxContainer"]
-margin_top = 170.0
+margin_top = 110.0
 margin_right = 257.0
-margin_bottom = 214.0
+margin_bottom = 161.0
 text = "END GAME"
 
+[node name="Version" type="Label" parent="Logo"]
+anchor_left = 0.88743
+anchor_right = 1.46341
+anchor_bottom = 0.112462
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/line_spacing = 0
+custom_constants/shadow_as_outline = 1
+text = "Version(12, 2,2022)"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
 [node name="Panel" type="Panel" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -129,3 +279,20 @@ margin_bottom = 168.0
 size_flags_vertical = 10
 text = "Use this data?"
 align = 1
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -60.0
+custom_colors/font_color = Color( 0.592157, 0.592157, 0.592157, 1 )
+text = "2022, envyniv"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/emit = SubResource( 2 )

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/game/CatcherCam.gd" type="Script" id=1]
+
+[node name="Player" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+current = true
+
+[node name="RayCast" type="RayCast" parent="Camera"]
+enabled = true
+cast_to = Vector3( 0, 0, -30 )

@@ -4,6 +4,12 @@ FreeDPM is a project that aims to create a standalone, open-source replacement o
 
 Its previous names were: denparpg, Open Denpa and, in conclusion, FreeDPM
 
+# Footage
+
+12/02/2022 - Early Indev
+
+[![Early Indev](http://img.youtube.com/vi/2yaVttZoP04/0.jpg)](https://www.youtube.com/watch?v=2yaVttZoP04 "Early Indev")
+
 --------------------------------------------------------------------------------
 
 # About the game

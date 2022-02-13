@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/privacy.png" type="Texture" id=1]
+[ext_resource path="res://scenes/PlayerCatch.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/game/DenpaGen.gd" type="Script" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 40, 1, 1 )
+
+[node name="DpmMan" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="CSGSphere" type="CSGSphere" parent="."]
+cast_shadow = 0
+calculate_tangents = false
+invert_faces = true
+radius = 30.0
+rings = 12
+material = SubResource( 1 )
+
+[node name="Denpas" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.27899, 0 )

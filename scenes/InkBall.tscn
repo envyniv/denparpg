@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SphereShape" id=1]
+radius = 1.5
+
+[node name="InkBall" type="Area"]
+
+[node name="CSGSphere" type="CSGSphere" parent="."]
+rings = 9
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
