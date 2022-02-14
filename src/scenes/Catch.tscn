@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/catch-spot.png" type="Texture" id=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.627329 )
+colors = PoolColorArray( 0.165253, 0.742188, 0.498793, 1, 0.0627451, 0.195098, 0.27451, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_unshaded = true
+albedo_texture = SubResource( 2 )
+
+[node name="Catch" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.961483, 0.274866, 0, -0.274866, 0.961483, 0, 1.40663, 2.25133 )
+current = true
+fov = 50.0
+
+[node name="Wall" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, -1 )
+material_override = SubResource( 3 )
+width = 10.0
+height = 0.001
+depth = 5.0
+
+[node name="Spot" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+texture = ExtResource( 2 )

@@ -1,14 +1,19 @@
-# ![FreeDPM Logo](logo.png "FreeDPM")
+# ![FreeDPM Logo](src/logo.png "FreeDPM")
 
-FreeDPM is a project that aims to create a standalone, open-source replacement of the "Denpa Men, The" Series's games, so that its charm may be felt on modern platforms. It started in 2018 along side [Project-Hope](https://envyniv.github.io/Project-Hope) as denparpg, but stagnated until 2022;
+_FreeDPM is a project that aims to create a standalone, open-source replacement of the "Denpa Men, The" Series's games, so that its charm may be felt on modern platforms. It started in 2018 along side [Project-Hope](https://envyniv.github.io/Project-Hope) as denparpg, but stagnated until 2022;_
 
-Its previous names were: denparpg, Open Denpa and, in conclusion, FreeDPM
+_Its previous names were: denparpg, Open Denpa and, in conclusion, FreeDPM_
 
 # Footage
 
-12/02/2022 - Early Indev
+13/02/2022 - Early Indev
 
 [![Early Indev](http://img.youtube.com/vi/2yaVttZoP04/0.jpg)](https://www.youtube.com/watch?v=2yaVttZoP04 "Early Indev")
+
+# TODO
+
+- [ ] Allow shooting at nothing in the Antenna Tower
+- [X] Save file
 
 --------------------------------------------------------------------------------
 
@@ -44,9 +49,25 @@ Brings back downed members, heals up to 50%; At LV. 30, will upgrade to Full Rev
 
 ### Fire
 
+#### Combust
+
 A flame spontaenously bursts on a selected enemy.
 
-![Concept Art](readme-media/antennae/fire/single.png)
+![Concept Art](readme-media/antennae/fire/single.png) ![Vector Drawing (PNG)](src/assets/antennae/fire/single.png)
+
+### Electricity
+
+#### Bolt
+
+Deals electricity damage to selected enemy and those right beside them.
+
+![Concept Art](readme-media/antennae/elec/aoe.png) ![Vector Drawing (PNG)](src/assets/antennae/elec/aoe.png)
+
+#### Shock
+
+Deals electricity damage to selected enemy and those right beside them.
+
+![Concept Art](readme-media/antennae/elec/single.png) ![Vector Drawing (PNG)](assets/antennae/elec/single.png)
 
 --------------------------------------------------------------------------------
 
@@ -56,7 +77,7 @@ A flame spontaenously bursts on a selected enemy.
 
 #### Dwarves
 
-They're back. Our favourite Broken english speaking dummies are back. ![Concept Art #1](readme-media/creatures/friendly/dwarf/IMG_20220212_160259.jpg) ![Model]() ![In Game]()
+They're back. Our favourite Broken english speaking dummies are back. ![Concept Art #1](readme-media/creatures/friendly/dwarf/IMG_20220212_160259.jpg) <!-- ![Model]() ![In Game]() -->
 
 ### Monsters
 
