@@ -1,8 +1,8 @@
 # ![FreeDPM Logo](src/logo.png "FreeDPM")
 
-_FreeDPM is a project that aims to create a standalone, open-source replacement of the "Denpa Men, The" Series's games, so that its charm may be felt on modern platforms. It started in 2018 along side [Project-Hope](https://envyniv.github.io/Project-Hope) as denparpg, but stagnated until 2022;_
+_FreeDPM is a project that aims to create a standalone, open-source replacement of the "Denpa Men, The" Series's games, so that its charm may be felt on modern platforms. Development was rebooted in 2022._
 
-_Its previous names were: denparpg, Open Denpa and, in conclusion, FreeDPM_
+_Another, secondary objective is compatibility with the original, proprietary games (mainly QR Code stuff and Generation)_
 
 # Footage
 
@@ -12,8 +12,11 @@ _Its previous names were: denparpg, Open Denpa and, in conclusion, FreeDPM_
 
 # TODO
 
-- [ ] Allow shooting at nothing in the Antenna Tower
-- [X] Save file
+- [ ] _Antenna Tower_, allow shooting at nothing
+- [ ] _DenpaGen.gd_, Simulation of original 3ds generation
+- [ ] QR Code generation
+- [ ] "Denpa Men, The", "Denpa Men 2, The", "Denpa Men 3, The" QR Code compatibility
+- [X] _Save file_, implement
 
 --------------------------------------------------------------------------------
 
@@ -41,7 +44,11 @@ At LV. 75 will upgrade to Heal (All), which fully heals every party member.
 
 ### Revive
 
-Brings back downed members, heals up to 50%; At LV. 30, will upgrade to Full Revive, which revives and heals completely. At LV. 75, will upgrade to its "All" variant, which revives all party members but initially heals up to 60%, but the more levels the denpa has, the more it will heal, up to 100%
+Brings back downed members, heals up to 50%;
+
+At LV. 30, will upgrade to Full Revive, which revives and heals completely.
+
+At LV. 75, will upgrade to its "All" variant, which revives all party members but initially heals up to 60%, but the more levels the denpa has, the more it will heal, up to 100%
 
 ![Concept Art](readme-media/antennae/revival/rev.jpg)
 

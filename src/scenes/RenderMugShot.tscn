@@ -1,5 +1,0 @@
-[gd_scene format=2]
-
-[node name="RenderMugShot" type="Spatial"]
-
-[node name="Camera" type="Camera" parent="."]

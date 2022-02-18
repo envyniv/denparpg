@@ -14,7 +14,7 @@ script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
-[node name="CSGSphere" type="CSGSphere" parent="."]
+[node name="Privacy" type="CSGSphere" parent="."]
 cast_shadow = 0
 calculate_tangents = false
 invert_faces = true

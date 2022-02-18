@@ -2,7 +2,7 @@
 
 [ext_resource path="res://materials/theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/binoculars.png" type="Texture" id=2]
-[ext_resource path="res://assets/sounds/click.ogg" type="AudioStream" id=3]
+[ext_resource path="res://scenes/DenPreview.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/crosshair.png" type="Texture" id=4]
 [ext_resource path="res://assets/radar.png" type="Texture" id=5]
 [ext_resource path="res://assets/radar-sight.png" type="Texture" id=6]
@@ -33,6 +33,13 @@ audio_listener_enable_2d = true
 audio_listener_enable_3d = true
 
 [node name="Spatial" parent="ViewportContainer/Viewport" instance=ExtResource( 7 )]
+
+[node name="InkSplashes" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Binoculars" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -92,7 +99,6 @@ text = "Antenna Root"
 valign = 1
 
 [node name="Rotation" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
 
 [node name="Catchable" type="Panel" parent="."]
 anchor_top = 1.0
@@ -114,13 +120,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="HBoxContainer" parent="Catchable"]
+[node name="Catched" type="HBoxContainer" parent="Catchable"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 296.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Preview" parent="Catchable/Catched" instance=ExtResource( 3 )]
+margin_right = 0.0
 
 [node name="Radar" type="TextureRect" parent="."]
 anchor_left = 1.0
@@ -129,6 +138,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -181.0
 margin_top = -181.0
+rect_pivot_offset = Vector2( 90.5, 90.5 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false

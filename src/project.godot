@@ -30,8 +30,8 @@ SceneMan="*res://scripts/SceneMan.gd"
 
 [display]
 
-window/stretch/mode="2d"
-window/stretch/aspect="keep_height"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [input]
 

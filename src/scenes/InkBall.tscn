@@ -1,12 +1,18 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[sub_resource type="SphereShape" id=1]
-radius = 1.5
+[ext_resource path="res://assets/inkball.png" type="Texture" id=1]
+[ext_resource path="res://scripts/InkBall.gd" type="Script" id=2]
 
-[node name="InkBall" type="Area"]
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.2, 0.2, 0.2 )
 
-[node name="CSGSphere" type="CSGSphere" parent="."]
-rings = 9
+[node name="InkBall" type="KinematicBody"]
+script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
+billboard = 1
+texture = ExtResource( 1 )

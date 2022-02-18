@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/DenPreview.gd" type="Script" id=1]
+
+[node name="Preview" type="MarginContainer"]
+margin_right = 78.0
+margin_bottom = 78.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="TextureRect" parent="."]
+margin_right = 78.0
+margin_bottom = 78.0
+
+[node name="Head" type="TextureRect" parent="BG"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Face" type="TextureRect" parent="BG/Head"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nose" type="TextureRect" parent="BG/Head/Face"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Eyes" type="TextureRect" parent="BG/Head/Face"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Mouth" type="TextureRect" parent="BG/Head/Face"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Glasses" type="TextureRect" parent="BG/Head/Face"]
+margin_right = 40.0
+margin_bottom = 40.0

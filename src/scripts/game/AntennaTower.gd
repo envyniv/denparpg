@@ -13,13 +13,17 @@ onready var Catchable=$Catchable/Label
 onready var Radar=$Radar
 onready var Sight=$Radar/Sight
 onready var Denpas=$Radar/Denpas
+onready var InkSplashes=$InkSplashes
 
-var Dot = load("res://assets/point.png")
+
+var Dot = preload("res://assets/point.png")
+var inksplash = preload("res://scenes/InkSplash.tscn")
 
 func _ready() -> void:
-  world.camera.connect("available", self, "on_available")
-  world.camera.connect("not_available", self, "on_gone")
+  world.player.connect("available", self, "on_available")
+  world.player.connect("not_available", self, "on_gone")
   world.connect("update_denpa", self, "on_update_denpa")
+  world.connect("you_got_splashed", self, "add_splash")
   return
 
 func on_available(target = null) -> void:
@@ -40,17 +44,27 @@ func on_gone() -> void:
 
 func _process(_delta) -> void:
   if Sight:
-    Sight.rect_rotation = -world.camera.rotation_degrees.y - 37
+    Sight.rect_rotation = -world.player.rotation_degrees.y - 37
   return
 
 func on_update_denpa(id : int, dddpos: Vector3) -> void:
-  var ddpos = Vector2(dddpos.x/30*90.5, dddpos.z/30*90.5) #2d position
+  var ddpos = Vector2(dddpos.x/30*90.5-4, dddpos.z/30*90.5-4) #2d position
   if !Denpas.has_node(str(id)):
     var tex=TextureRect.new()
     tex.texture=Dot
     tex.rect_size=Vector2(8, 8)
-    tex.rect_pivot_offset=Vector2(4, 4)
     Denpas.add_child(tex)
     Denpas.get_child(id).name=str(id)
   Denpas.get_node(str(id)).rect_position=ddpos
+  return
+
+func add_splash(Position:Vector2, Clr:Color) -> void:
+  var ink=inksplash.instance()
+  InkSplashes.add_child(ink)
+  var w_h = OS.get_window_size().y
+  ink.rect_size=Vector2(w_h, w_h)
+  ink.modulate      = Clr
+  ink.rect_position = (Position - ink.rect_size/2)
+  yield(get_tree().create_timer(6), "timeout")
+  ink.queue_free()
   return
