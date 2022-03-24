@@ -1,8 +1,10 @@
 # ![FreeDPM Logo](src/logo.png "FreeDPM")
 
-_FreeDPM is a project that aims to create a standalone, open-source replacement of the "Denpa Men, The" Series's games, so that its charm may be felt on modern platforms. Development was rebooted in 2022._
+--------------------------------------------------------------------------------
 
-_Another, secondary objective is compatibility with the original, proprietary games (mainly QR Code stuff and Generation)_
+## _FreeDPM is a project that aims to create a standalone, open-source replacement of the "Denpa Men, The" Series's games, so that its charm may be felt on modern platforms. Development was rebooted in 2022._
+
+### _Another, secondary objective is compatibility with the original, proprietary games (mainly QR Code stuff and Generation)_
 
 # Footage
 
@@ -12,10 +14,14 @@ _Another, secondary objective is compatibility with the original, proprietary ga
 
 # TODO
 
+Estimated Completion Percentage: ![Pretty Much Nothing](https://progress-bar.dev/1?title=Nothing)
+
 - [ ] _Antenna Tower_, allow shooting at nothing
-- [ ] _DenpaGen.gd_, Simulation of original 3ds generation
+- [ ] _Antenna Tower_, Scan WiFi and generate
 - [ ] QR Code generation
 - [ ] "Denpa Men, The", "Denpa Men 2, The", "Denpa Men 3, The" QR Code compatibility
+- [X] _Antenna Tower_, random denpa scale multiplier, denpa slight transparency
+- [X] _Antenna Tower_, denpa now throw ink balls
 - [X] _Save file_, implement
 
 --------------------------------------------------------------------------------

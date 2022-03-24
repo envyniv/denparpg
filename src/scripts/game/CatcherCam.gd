@@ -24,10 +24,9 @@ func _input(event) -> void:
     cam.rotation.x = clamp(cam.rotation.x, deg2rad(-50), deg2rad(50))
   return
 
-func _process(_delta) -> void:
+func _process(delta) -> void:
   #realign to pitch 0
-  if rotation_degrees.x != 0:
-    rotation.x -= rotation.x/3
+  cam.rotation.x += 0 - cam.rotation.x*delta/2
   
   if aimcast.is_colliding():
     #var bullet = get_world().direct_space_state

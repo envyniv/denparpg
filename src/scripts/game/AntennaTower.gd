@@ -9,11 +9,12 @@ onready var Name=$HBoxContainer/Name
 onready var Level=$HBoxContainer/Level
 onready var Antenna=$HBoxContainer/Antenna
 onready var Catchable=$Catchable/Label
+onready var View=$ViewportContainer/Viewport
 
-onready var Radar=$Radar
-onready var Sight=$Radar/Sight
-onready var Denpas=$Radar/Denpas
-onready var InkSplashes=$InkSplashes
+onready var Radar       = $Control/Radar
+onready var Sight       = $Control/Radar/Sight
+onready var Denpas      = $Control/Radar/Denpas
+onready var InkSplashes = $InkSplashes
 
 
 var Dot = preload("res://assets/point.png")
@@ -24,6 +25,7 @@ func _ready() -> void:
   world.player.connect("not_available", self, "on_gone")
   world.connect("update_denpa", self, "on_update_denpa")
   world.connect("you_got_splashed", self, "add_splash")
+  
   return
 
 func on_available(target = null) -> void:
@@ -43,8 +45,10 @@ func on_gone() -> void:
   Antenna.hide()
 
 func _process(_delta) -> void:
-  if Sight:
-    Sight.rect_rotation = -world.player.rotation_degrees.y - 37
+  if Denpas:
+    Denpas.rect_rotation = world.player.rotation_degrees.y
+  if View:
+    View.size=OS.get_window_size()
   return
 
 func on_update_denpa(id : int, dddpos: Vector3) -> void:
@@ -58,11 +62,11 @@ func on_update_denpa(id : int, dddpos: Vector3) -> void:
   Denpas.get_node(str(id)).rect_position=ddpos
   return
 
-func add_splash(Position:Vector2, Clr:Color) -> void:
+func add_splash(Position : Vector2, Clr : Color) -> void:
   var ink=inksplash.instance()
   InkSplashes.add_child(ink)
-  var w_h = OS.get_window_size().y
-  ink.rect_size=Vector2(w_h, w_h)
+  var win_h = OS.get_window_size().y
+  ink.rect_size     = Vector2(win_h, win_h)
   ink.modulate      = Clr
   ink.rect_position = (Position - ink.rect_size/2)
   yield(get_tree().create_timer(6), "timeout")

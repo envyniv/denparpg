@@ -28,10 +28,9 @@ config/icon="res://icon.png"
 
 SceneMan="*res://scripts/SceneMan.gd"
 
-[display]
+[gdnative]
 
-window/stretch/mode="viewport"
-window/stretch/aspect="keep"
+singletons=[  ]
 
 [input]
 

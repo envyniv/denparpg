@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://materials/theme.tres" type="Theme" id=1]
 [ext_resource path="res://radio_left.png" type="Texture" id=2]
 [ext_resource path="res://radio_right.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Title3DBG.tscn" type="PackedScene" id=4]
 [ext_resource path="res://logo.png" type="Texture" id=5]
+[ext_resource path="res://scripts/Title.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -114,6 +115,7 @@ tracks/3/keys = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -171,20 +173,12 @@ anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -130.5
-margin_top = 312.0
+margin_top = 332.0
 margin_right = 126.5
-margin_bottom = 142.0
+margin_bottom = 164.0
 alignment = 1
 __meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Load" type="Button" parent="Logo/VBoxContainer"]
-visible = false
-margin_right = 257.0
-margin_bottom = 51.0
-text = "LOAD GAME"
-__meta__ = {
+"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
@@ -205,20 +199,8 @@ margin_right = 257.0
 margin_bottom = 161.0
 text = "END GAME"
 
-[node name="Version" type="Label" parent="Logo"]
-anchor_left = 0.88743
-anchor_right = 1.46341
-anchor_bottom = 0.112462
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/line_spacing = 0
-custom_constants/shadow_as_outline = 1
-text = "Version(12, 2,2022)"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
 [node name="Panel" type="Panel" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -296,13 +278,17 @@ size_flags_vertical = 10
 text = "Use this data?"
 align = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Release" type="Label" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -60.0
 custom_colors/font_color = Color( 0.592157, 0.592157, 0.592157, 1 )
-text = "2022, envyniv"
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 50
+text = "v0.0.1e   2022, envyniv"
 align = 1
 valign = 1
 __meta__ = {

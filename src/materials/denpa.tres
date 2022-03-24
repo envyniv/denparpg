@@ -1,6 +1,7 @@
 [gd_resource type="SpatialMaterial" format=2]
 
 [resource]
+flags_do_not_receive_shadows = true
 metallic = 0.22
 roughness = 0.37
 emission_enabled = true

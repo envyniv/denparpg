@@ -1,18 +1,29 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/DenPreview.gd" type="Script" id=1]
 
+[sub_resource type="OpenSimplexNoise" id=2]
+
+[sub_resource type="NoiseTexture" id=1]
+width = 52
+height = 52
+noise = SubResource( 2 )
+
 [node name="Preview" type="MarginContainer"]
-margin_right = 78.0
-margin_bottom = 78.0
+margin_right = 64.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BG" type="TextureRect" parent="."]
-margin_right = 78.0
-margin_bottom = 78.0
+self_modulate = Color( 0, 0.717647, 1, 1 )
+margin_right = 64.0
+margin_bottom = 64.0
+texture = SubResource( 1 )
 
 [node name="Head" type="TextureRect" parent="BG"]
 margin_right = 40.0
@@ -38,11 +49,22 @@ __meta__ = {
 [node name="Eyes" type="TextureRect" parent="BG/Head/Face"]
 margin_right = 40.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Mouth" type="TextureRect" parent="BG/Head/Face"]
 margin_right = 40.0
 margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Glasses" type="TextureRect" parent="BG/Head/Face"]
 margin_right = 40.0
 margin_bottom = 40.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}

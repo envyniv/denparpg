@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="40.894001mm"
+   height="38.205002mm"
+   viewBox="0 0 40.894001 38.205002"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="checkbutton.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="3.9211545"
+     inkscape:cx="64.266788"
+     inkscape:cy="84.796456"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient39935">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop39931" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop39933" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient39935"
+       id="linearGradient39937"
+       x1="20.175961"
+       y1="28.816601"
+       x2="39.977306"
+       y2="28.816601"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-3.035228,0.08693355)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path943"
+       style="fill:#502b50;fill-opacity:1;fill-rule:evenodd;stroke-width:6.01163"
+       d="M 10.890937,2.0485831e-8 C 7.0000655,-2.2297951e-4 3.4046345,1.82018 1.4590755,4.775445 c -1.945434,2.955275 -1.945434,6.596343 0,9.551616 1.945559,2.955266 5.54099,4.775667 9.4318615,4.775446 z m 19.113425,0 V 19.102507 c 3.890576,-3.4e-5 7.485631,-1.820401 9.43104,-4.775446 1.945434,-2.955273 1.945434,-6.596341 0,-9.551616 C 37.489993,1.820402 33.894938,3.4020486e-5 30.004362,2.0485831e-8 Z m -19.113425,0 V 19.102507 H 30.004362 V 2.0485831e-8 Z"
+       sodipodi:nodetypes="ccccccccccccccc"
+       inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton-on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#ffdd00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.4154;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path30915"
+       cx="11.027719"
+       cy="9.5778751"
+       rx="9.889617"
+       ry="8.9113989"
+       inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton-on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       aria-label="ON"
+       id="text10393"
+       style="font-size:10.5833px;line-height:1.25;stroke:#271616;stroke-width:1.165;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       transform="translate(-16.838505,-12.803751)"
+       inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton-on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         d="m 23.738658,26.252124 q -1.100663,0 -1.936744,-0.476248 -0.825497,-0.486832 -1.291163,-1.354663 -0.455082,-0.86783 -0.455082,-2.02141 0,-0.878414 0.254,-1.576912 0.264582,-0.709081 0.751414,-1.206496 0.486832,-0.507998 1.164163,-0.783164 0.687914,-0.275166 1.513412,-0.275166 1.12183,0 1.947327,0.476249 0.825497,0.476248 1.280579,1.344079 0.465665,0.857247 0.465665,2.010827 0,0.878414 -0.264582,1.587495 -0.264583,0.709081 -0.751414,1.217079 -0.486832,0.507999 -1.164163,0.783164 -0.677332,0.275166 -1.513412,0.275166 z m 0,-1.396995 q 0.624414,0 1.05833,-0.285749 0.444498,-0.296333 0.677331,-0.846664 0.243416,-0.560915 0.243416,-1.322913 0,-1.164163 -0.518582,-1.799161 -0.518582,-0.645581 -1.460495,-0.645581 -0.613832,0 -1.05833,0.285749 -0.444499,0.285749 -0.677331,0.836081 -0.232833,0.550331 -0.232833,1.322912 0,1.15358 0.518582,1.809744 0.518581,0.645582 1.449912,0.645582 z"
+         style="font-weight:800;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold';fill:#ffffff;stroke:#271616;stroke-width:1.165;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path30587" />
+      <path
+         d="m 29.464218,26.230958 q -0.370416,0 -0.571499,-0.201083 Q 28.70222,25.818209 28.70222,25.43721 v -6.032481 q 0,-0.402165 0.190499,-0.613831 0.201083,-0.211666 0.529165,-0.211666 0.285749,0 0.433916,0.116416 0.158749,0.105833 0.359832,0.359832 l 3.714738,4.730735 h -0.285749 v -4.423819 q 0,-0.370415 0.190499,-0.571498 0.201083,-0.211666 0.571498,-0.211666 0.370416,0 0.560915,0.211666 0.201083,0.201083 0.201083,0.571498 v 6.106564 q 0,0.349249 -0.179916,0.560915 -0.179916,0.201083 -0.486832,0.201083 -0.296332,0 -0.476248,-0.116417 -0.169333,-0.116416 -0.370416,-0.370415 l -3.704155,-4.730735 h 0.275166 v 4.423819 q 0,0.380999 -0.190499,0.592665 -0.1905,0.201083 -0.571498,0.201083 z"
+         style="font-weight:800;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold';fill:#ffffff;stroke:#271616;stroke-width:1.165;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path30589" />
+    </g>
+    <g
+       aria-label="OFF"
+       id="text19775"
+       style="font-size:8.46667px;line-height:1.25;fill:#8d8d8d;stroke:#271616;stroke-width:0.765;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       transform="translate(-16.838505,-12.803751)"
+       inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton-on.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         d="m 41.283958,25.567853 q -0.846667,0 -1.464734,-0.372533 -0.618067,-0.381 -0.9652,-1.0668 -0.338667,-0.694267 -0.338667,-1.625601 0,-0.702734 0.194733,-1.261534 0.194734,-0.567267 0.550334,-0.9652 0.364067,-0.4064 0.872067,-0.618067 0.516467,-0.211667 1.151467,-0.211667 0.846667,0 1.464734,0.372534 0.618067,0.372533 0.956734,1.058333 0.338666,0.685801 0.338666,1.617134 0,0.702734 -0.194733,1.270001 -0.194733,0.567267 -0.5588,0.973667 -0.3556,0.4064 -0.863601,0.618067 -0.508,0.211666 -1.143,0.211666 z m 0,-0.694266 q 0.6096,0 1.0414,-0.279401 0.431801,-0.2794 0.660401,-0.8128 0.237066,-0.5334 0.237066,-1.278467 0,-1.126067 -0.508,-1.744134 -0.499533,-0.618067 -1.430867,-0.618067 -0.6096,0 -1.049867,0.2794 -0.4318,0.270934 -0.6604,0.804334 -0.2286,0.524933 -0.2286,1.278467 0,1.1176 0.508,1.744134 0.508,0.626534 1.430867,0.626534 z"
+         style="font-family:Nunito;-inkscape-font-specification:Nunito;stroke:#271616;stroke-width:0.765;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path30610" />
+      <path
+         d="m 45.678159,25.55092 q -0.194733,0 -0.3048,-0.110067 -0.110067,-0.110066 -0.110067,-0.313266 v -5.181602 q 0,-0.203201 0.110067,-0.313267 0.110067,-0.110067 0.313267,-0.110067 h 3.039534 q 0.169334,0 0.254,0.08467 0.08467,0.0762 0.08467,0.2286 0,0.160867 -0.08467,0.245533 -0.08467,0.08467 -0.254,0.08467 h -2.675467 v 1.998134 h 2.506134 q 0.160867,0 0.245533,0.08467 0.08467,0.08467 0.08467,0.2286 0,0.160867 -0.08467,0.245533 -0.08467,0.08467 -0.245533,0.08467 h -2.506134 v 2.319868 q 0,0.423333 -0.372534,0.423333 z"
+         style="font-family:Nunito;-inkscape-font-specification:Nunito;stroke:#271616;stroke-width:0.765;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path30612" />
+      <path
+         d="m 50.343284,25.55092 q -0.194734,0 -0.304801,-0.110067 -0.110066,-0.110066 -0.110066,-0.313266 v -5.181602 q 0,-0.203201 0.110066,-0.313267 0.110067,-0.110067 0.313267,-0.110067 h 3.039535 q 0.169333,0 0.254,0.08467 0.08467,0.0762 0.08467,0.2286 0,0.160867 -0.08467,0.245533 -0.08467,0.08467 -0.254,0.08467 h -2.675468 v 1.998134 h 2.506134 q 0.160867,0 0.245534,0.08467 0.08467,0.08467 0.08467,0.2286 0,0.160867 -0.08467,0.245533 -0.08467,0.08467 -0.245534,0.08467 h -2.506134 v 2.319868 q 0,0.423333 -0.372533,0.423333 z"
+         style="font-family:Nunito;-inkscape-font-specification:Nunito;stroke:#271616;stroke-width:0.765;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         id="path30614" />
+    </g>
+    <path
+       id="path943-3"
+       style="fill:#502b50;fill-opacity:1;fill-rule:evenodd;stroke-width:6.01163"
+       d="m 10.890937,19.102507 c -3.890871,-2.23e-4 -7.4863022,1.82018 -9.4318612,4.775445 -1.945434,2.955275 -1.945434,6.596343 0,9.551616 1.945559,2.955266 5.5409902,4.775667 9.4318612,4.775446 z m 19.113425,0 v 19.102507 c 3.890576,-3.4e-5 7.485631,-1.820401 9.43104,-4.775446 1.945434,-2.955273 1.945434,-6.596341 0,-9.551616 -1.945409,-2.955043 -5.540464,-4.775411 -9.43104,-4.775445 z m -19.113425,0 V 38.205014 H 30.004362 V 19.102507 Z"
+       sodipodi:nodetypes="ccccccccccccccc"
+       inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton-off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#ffdd00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:3.72703;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="path30915-6"
+       cx="28.069302"
+       cy="28.680382"
+       rx="11.776652"
+       ry="8.9113989"
+       inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton-off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       aria-label="OFF"
+       id="text19775-5"
+       style="font-size:8.46667px;line-height:1.25;fill:#8d8d8d;stroke:#271616;stroke-width:0.765;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       transform="translate(-16.838505,6.298756)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.165;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="17.42338"
+       y="32.634148"
+       id="text34859"
+       inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton-off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan34857"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Nunito;-inkscape-font-specification:'Nunito Ultra-Bold';fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.165;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="17.42338"
+         y="32.634148">OFF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.46667px;line-height:1.25;font-family:sans-serif;fill:#8d8d8d;fill-opacity:1;stroke:#271616;stroke-width:0.765;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="3.5614829"
+       y="31.891211"
+       id="text43757"
+       inkscape:export-filename="/home/davide/Documents/freedpm/src/assets/checkbutton-off.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan43755"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Nunito;-inkscape-font-specification:Nunito;fill:#8d8d8d;fill-opacity:1;stroke:#271616;stroke-width:0.765;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="3.5614829"
+         y="31.891211">ON</tspan></text>
+  </g>
+</svg>
