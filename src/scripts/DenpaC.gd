@@ -4,10 +4,10 @@ var inkball = preload("res://scenes/InkBall.tscn")
 
 onready var animplayer   = $AnimationPlayer
 onready var colshp       = $CollisionShape
-onready var body         = $Body
-onready var head         = $Body/Head
-onready var vis_antenna  = $Body/Head/Antenna
-onready var antenna_ring = $Body/Head/Antenna/All
+onready var body         = $body/Armature/Skeleton/vsn_mesh_0_mesh0ody
+onready var head         = $body/head_1/Sphere
+onready var vis_antenna  = $body/head_1/Antenna
+onready var antenna_ring = $body/head_1/Antenna/All
 
 
 export(String) var chosen_name = ""
@@ -46,7 +46,7 @@ signal spawned_ball
 signal lemmeThrow
 signal imLeaving
 
-func _physics_process(_delta):
+func _physics_process(_delta) -> void:
 
   match _current_state:
     IDLE:
@@ -59,15 +59,19 @@ func _physics_process(_delta):
 
 func Wander() -> void:
   var direction
-  point = get_parent().get_parent().rnd_pos()
-  if point.distance_to(transform.origin) > 0.05:
+  point = null
+  if point==null:
+    get_parent().get_parent().rnd_pos()
+  elif point.distance_to(transform.origin) > 0.05:
     direction = point - transform.origin
     direction = direction.normalized() * 5
   else:
     direction = point - transform.origin
     _current_state=IDLE
+    point=null
   #warning-ignore:return_value_discarded
-  move_and_slide(direction)
+  if point!=null:
+    move_and_slide(direction)
   return
 
 func BeginThrow() -> void:
@@ -79,7 +83,7 @@ func Throw() -> void:
   var ball = inkball.instance()
   ball.color=color #give it your color
   get_parent().get_parent().add_child(ball) #spawn ball
-  ball.global_transform.origin = global_transform.origin #make it look like you spawned it 
+  ball.global_transform.origin = global_transform.origin #make it look like you spawned it
   #yield(animplayer.play("Throw"), "finished")
   emit_signal("spawned_ball", ball)
   _current_state=IDLE

@@ -2,7 +2,7 @@
 
 --------------------------------------------------------------------------------
 
-## _FreeDPM is a project that aims to create a standalone, open-source replacement of the "Denpa Men, The" Series's games, so that its charm may be felt on modern platforms. Development was rebooted in 2022._
+## _FreeDPM is a project that aims to create an expansible codebase implementing gameplay mechanics from the "Denpa Men, The" series of games, so that its charm may be felt on modern platforms._
 
 ### _Another, secondary objective is compatibility with the original, proprietary games (mainly QR Code stuff and Generation)_
 
@@ -23,20 +23,21 @@ Estimated Completion Percentage: ![Pretty Much Nothing](https://progress-bar.dev
 - [X] _Antenna Tower_, random denpa scale multiplier, denpa slight transparency
 - [X] _Antenna Tower_, denpa now throw ink balls
 - [X] _Save file_, implement
+- [ ] _Create a functioning 3d tileset editor in the GODOT Engine_
 
 --------------------------------------------------------------------------------
 
-# About the game
+# About the codebase
 
-the following is an encyclopedic collection on all creatues, items, concepts and antennae conceived for the game.
+the following is an encyclopedic collection on all creatues, items, concepts and antennae conceived for the codebase.
 
 ## Antennae
 
 ### Status Affecting (Buffs, Debuffs, Cures)
 
-## Heals
+### Heals
 
-### Heal
+#### Heal
 
 Heals selected for 25% of their max health;
 
@@ -48,7 +49,7 @@ At LV. 75 will upgrade to Heal (All), which fully heals every party member.
 
 ![Concept Art](readme-media/antennae/heal/single.png) ![Concept Art (All variant)](readme-media/antennae/heal/all.png)
 
-### Revive
+#### Revive
 
 Brings back downed members, heals up to 50%;
 
@@ -58,11 +59,11 @@ At LV. 75, will upgrade to its "All" variant, which revives all party members bu
 
 ![Concept Art](readme-media/antennae/revival/rev.jpg)
 
-## Attacks
+### Attacks
 
-### Fire
+#### Fire
 
-#### Combust
+##### Combust
 
 A flame spontaenously bursts on a selected enemy.
 
@@ -80,7 +81,7 @@ Deals electricity damage to selected enemy and those right beside them.
 
 Deals electricity damage to selected enemy and those right beside them.
 
-![Concept Art](readme-media/antennae/elec/single.png) ![Vector Drawing (PNG)](assets/antennae/elec/single.png)
+![Concept Art](readme-media/antennae/elec/single.png) <!--![Vector Drawing (PNG)](assets/antennae/elec/single.png)-->
 
 --------------------------------------------------------------------------------
 

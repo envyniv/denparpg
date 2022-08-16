@@ -1,39 +1,42 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/DenpaC.gd" type="Script" id=1]
 [ext_resource path="res://materials/denpa.tres" type="Material" id=2]
 [ext_resource path="res://assets/antennae/revive_single.png" type="Texture" id=3]
 [ext_resource path="res://assets/antennae/all_ring.png" type="Texture" id=4]
+[ext_resource path="res://assets/head_1.glb" type="PackedScene" id=5]
+[ext_resource path="res://assets/body.glb" type="PackedScene" id=6]
 
 [sub_resource type="SpatialMaterial" id=3]
 flags_transparent = true
 albedo_texture = ExtResource( 4 )
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.606421, 1.12397, 0.586639 )
+extents = Vector3( 0.606421, 1.5548, 0.586639 )
 
 [node name="Denpa" type="KinematicBody" groups=["denpa"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50299, 0 )
 collision_layer = 2
 script = ExtResource( 1 )
 
-[node name="Body" type="CSGSphere" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.29633, 0 )
-radius = 0.648994
-material = ExtResource( 2 )
+[node name="body" parent="." instance=ExtResource( 6 )]
 
-[node name="Head" type="CSGSphere" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.913092, 0 )
-radius = 0.611627
-material = ExtResource( 2 )
+[node name="vsn_mesh_0_mesh0" parent="body/Armature/Skeleton" index="0"]
+material/0 = ExtResource( 2 )
 
-[node name="Antenna" type="Sprite3D" parent="Body/Head"]
-transform = Transform( 0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0.836963, 0 )
+[node name="head_1" parent="body" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59198, 0 )
+
+[node name="Sphere" parent="body/head_1" index="0"]
+material/0 = ExtResource( 2 )
+
+[node name="Antenna" type="Sprite3D" parent="body/head_1"]
+transform = Transform( 0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 1.23005, 0 )
 offset = Vector2( -20, 0 )
 billboard = 2
 texture = ExtResource( 3 )
 
-[node name="All" type="CSGBox" parent="Body/Head/Antenna"]
+[node name="All" type="CSGBox" parent="body/head_1/Antenna"]
 transform = Transform( 0.966403, 0.0560697, 0.250841, -0.257032, 0.210814, 0.943129, 0, -0.975917, 0.218143, 0, -0.104055, 0 )
 width = 1.0
 height = 1.0
@@ -41,7 +44,11 @@ depth = 0.001
 material = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4937, 0 )
 shape = SubResource( 2 )
 disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[editable path="body"]
+[editable path="body/head_1"]
